@@ -20,7 +20,7 @@ public class UserController {
         return "Endpoint is not secured";
     }
 
-    @PostMapping("/adduser")
+    @PostMapping("/adduser")     // For user sign up
     public UserInfo addNewUser(@RequestBody UserInfo userInfo) {
         return userInfoService.addNewUser(userInfo);
     }
