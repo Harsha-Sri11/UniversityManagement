@@ -26,6 +26,7 @@ public class CourseController {
     }
 
     @GetMapping("/getcourses")
+    @PreAuthorize("hasRole('USER')")     //ROLE has to be appended to the USER ,we need to store ROLE_**** in the DB
     public List<Course> getAllCourses(){
         return courseService.getAllCourses();
     }

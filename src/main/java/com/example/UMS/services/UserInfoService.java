@@ -24,4 +24,8 @@ public class UserInfoService {
     public List<UserInfo> getUsers(){
         return userRepository.findAll();
     }
+
+    public void deleteUser(int userid){
+         userRepository.deleteById(userid);
+    }
 }
